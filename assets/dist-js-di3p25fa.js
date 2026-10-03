@@ -1,0 +1,1 @@
+import{n as t}from"./rolldown-runtime-DnWYPg9J.js";import{a}from"./core-DChKMSZd.js";var i=t({open:()=>r,save:()=>n});async function r(e={}){return typeof e=="object"&&Object.freeze(e),await a("plugin:dialog|open",{options:e})}async function n(e={}){return typeof e=="object"&&Object.freeze(e),await a("plugin:dialog|save",{options:e})}export{r as n,i as t};
