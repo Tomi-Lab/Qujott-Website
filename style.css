@@ -228,6 +228,22 @@ html[lang="en"] .lang-ja {
   font-weight: 600;
 }
 
+.btn-experience {
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.btn-experience:hover {
+  border-color: rgba(37, 99, 235, 0.4);
+  background-color: rgba(37, 99, 235, 0.05);
+  transform: translateY(-1px);
+}
+
+.badge-experience {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  font-weight: 700;
+}
+
 /* Visual Screenshot Frames */
 .media-container {
   width: 100%;
