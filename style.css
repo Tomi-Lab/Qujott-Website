@@ -478,14 +478,11 @@ html[lang="en"] .lang-ja {
   color: #2e7d32;
 }
 
-.status-soon {
+.status-soon,
+.status-considering {
   background-color: rgba(0, 0, 0, 0.05);
   color: var(--text-subtle);
-}
-
-.status-considering {
-  background-color: rgba(217, 119, 6, 0.08);
-  color: #b45309;
+  border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 /* 7. Footer */
