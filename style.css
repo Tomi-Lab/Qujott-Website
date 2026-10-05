@@ -483,6 +483,11 @@ html[lang="en"] .lang-ja {
   color: var(--text-subtle);
 }
 
+.status-considering {
+  background-color: rgba(217, 119, 6, 0.08);
+  color: #b45309;
+}
+
 /* 7. Footer */
 .site-footer {
   margin-top: auto;
