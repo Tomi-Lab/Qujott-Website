@@ -1,515 +1,71 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qujott — 思いついた瞬間に、気軽に書き留め、あとから眺められる雑記帳</title>
-  <meta name="description" content="Qujott（クジョット）は、ノートの気軽さと見やすさ、テキストエディタの自由さと汎用性を備えた軽量な雑記帳です。標準Markdown形式対応。">
-  <meta name="theme-color" content="#ffffff">
-  
-  <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="Ba4p3ZzvcM0wk_723Eq8o8l4pbdrR7qrbykzYvb2q4Y">
-  
-  <!-- Favicon & Touch Icon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="images/app-icon.png">
-
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Qujott — 思いついた瞬間に、気軽に書き留め、あとから眺められる雑記帳">
-  <meta property="og:description" content="ノートの気軽さと見やすさ、テキストエディタの自由さと汎用性を備えた軽量な雑記帳。整理はあとで。まずは、思考をすぐそばに。">
-  <meta property="og:image" content="images/hero-two-pane.png">
-  <meta property="og:type" content="website">
-  
-  <!-- Google Fonts: Inter & Outfit -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7P35Y3G9J"></script>
+  <title>Qujott — Quiet Jotter</title>
+  <meta name="description" content="Qujott combines the simplicity and readability of a notepad with the freedom and versatility of a text editor. Standard Markdown notes with zero proprietary lock-in.">
+  <link rel="canonical" href="https://qujott.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://qujott.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://qujott.com/ja/">
+  <link rel="alternate" hreflang="en" href="https://qujott.com/en/">
+  <link rel="alternate" hreflang="es" href="https://qujott.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/">
+  <link rel="alternate" hreflang="de" href="https://qujott.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://qujott.com/fr/">
+  <link rel="alternate" hreflang="ko" href="https://qujott.com/ko/">
+  <link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/">
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=en/">
+  </noscript>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-R7P35Y3G9J');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "yj6hat2i6m");
-  </script>
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Top Tagline Bar -->
-  <header class="top-tagline-bar">
-    <div class="container top-bar-inner">
-      <a href="index.html" class="top-brand-link">
-        <img src="images/app-icon.png" alt="Qujott Icon" class="top-brand-icon">
-        <span class="tagline-primary">Quiet Jotter.</span>
-      </a>
-      <div class="language-switch">
-        <span class="lang-label">Lang</span>
-        <button type="button" class="lang-btn active" data-lang="ja" onclick="setLanguage('ja')">JP</button>
-        <span class="lang-divider">/</span>
-        <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container hero-content">
-        <div class="brand">
-          <img src="images/app-icon.png" alt="Qujott App Icon" class="hero-icon-large">
-          <h1 class="app-title">Qujott</h1>
-          <p class="hero-heading">
-            <span class="lang-ja">思いついた瞬間に、気軽に書き留め、<br class="desktop-break">あとから眺められる。</span>
-            <span class="lang-en">Capture your thoughts with ease, <br class="desktop-break">and revisit them whenever you like.</span>
-          </p>
-        </div>
-
-        <p class="hero-description">
-          <span class="lang-ja">
-            Qujott（クジョット）は、ノートの気軽さと見やすさ、テキストエディタの自由さと汎用性を備えた、軽量な雑記帳です。<br>
-            整理はあとで。まずは、思考をすぐそばに。<br>
-            <span class="hero-subtext">標準的なMarkdown形式に対応。テキストファイルとして、自由に保存・編集できます。</span>
-          </span>
-          <span class="lang-en">
-            Qujott combines the simplicity and readability of a notepad with the freedom and versatility of a text editor—all in a lightweight digital notebook.<br>
-            Organize later. Keep your thoughts close.<br>
-            <span class="hero-subtext">Supports standard Markdown. Save and edit your notes as plain text files, wherever you choose.</span>
-          </span>
-        </p>
-
-        <!-- Action Buttons -->
-        <div class="action-buttons">
-          <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
-            </svg>
-            <span class="lang-ja">Windows版を入手 (Microsoft Store)</span>
-            <span class="lang-en">Download for Windows</span>
-          </a>
-          <a href="experience.html" class="btn btn-secondary btn-experience">
-            <span class="lang-ja">Webで体験する</span>
-            <span class="lang-en">Try Qujott</span>
-            <span class="badge badge-experience">Experience</span>
-          </a>
-          <div class="btn btn-disabled">
-            Mac <span class="badge"><span class="lang-ja">開発中</span><span class="lang-en">In development</span></span>
-          </div>
-          <div class="btn btn-disabled">
-            iPhone / iPad <span class="badge"><span class="lang-ja">開発中</span><span class="lang-en">In development</span></span>
-          </div>
-          <div class="btn btn-disabled">
-            Android <span class="badge"><span class="lang-ja">検討中</span><span class="lang-en">Considering</span></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hero Visual Showcase -->
-      <div class="container-wide media-container">
-        <div class="screenshot-frame">
-          <img src="images/hero-two-pane-ja.png" alt="Qujott メイン画面 2ペイン表示 (日本語)" class="screenshot-img lang-ja">
-          <img src="images/hero-two-pane-en.png" alt="Qujott Main Two-Pane Workspace (English)" class="screenshot-img lang-en">
-        </div>
-        <p class="media-caption">
-          <span class="lang-ja">思考とメモ一覧が自然に並ぶ、端正で静かな2ペイン空間</span>
-          <span class="lang-en">A clean two-pane space keeping your thoughts and note list effortlessly in view</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- Philosophy Section -->
-    <section class="section philosophy-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Philosophy</span>
-          <h2 class="section-title">
-            <span class="lang-ja">机の横の紙のメモ帳のように、すぐ書けること。</span>
-            <span class="lang-en">Like a paper notepad resting beside your desk.</span>
-          </h2>
-        </div>
-        <p class="section-body">
-          <span class="lang-ja">
-            Qujottは、複雑なタスク管理や巨大な知識ベースを作るためのツールではありません。<br>
-            机の横に置いてある紙のメモ帳のように、思いついたその瞬間に迷わず書き始められることだけにこだわりました。<br><br>
-            事前のフォルダ分けを悩む必要も、タグ付けを強制されることもありません。<br>
-            頭に浮かんだ言葉をそのまま書き留め、すぐそばに置いておく。整理はあとから眺めながら行えます。
-          </span>
-          <span class="lang-en">
-            Qujott is not an overwhelming database or a complicated task management system.<br>
-            Like a paper notepad resting beside your keyboard, it is designed for one thing: letting you start writing the instant a thought arrives.<br><br>
-            No folder hierarchies to navigate upfront. No mandatory tags to file.<br>
-            Capture your thoughts first and keep them close. Organization can wait until you browse them later.
-          </span>
-        </p>
-      </div>
-    </section>
-
-    <!-- Core Experience Section -->
-    <section class="section experience-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Core Experience</span>
-          <h2 class="section-title">
-            <span class="lang-ja">書く、しまう、再会する</span>
-            <span class="lang-en">Write, Put Away, Revisit</span>
-          </h2>
-          <p class="section-subtitle">
-            <span class="lang-ja">日常の思考を淀みなく循環させる、3つのシンプルな仕組み</span>
-            <span class="lang-en">A natural cycle designed to keep your thoughts close and your mind clear</span>
-          </p>
-        </div>
-
-        <div class="experience-grid">
-          <div class="exp-card">
-            <div class="exp-num">01</div>
-            <h3 class="exp-title">Immediate Capture</h3>
-            <p class="exp-sub">
-              <span class="lang-ja">すぐ書く</span>
-              <span class="lang-en">Frictionless Capture</span>
-            </p>
-            <p class="exp-desc">
-              <span class="lang-ja">アプリを開いた瞬間から迷わず書き始められます。思考が消えてしまう前に、そのまま言葉へ。</span>
-              <span class="lang-en">Start typing the instant you open the app. Zero friction between thought and text before ideas fade away.</span>
-            </p>
-          </div>
-
-          <div class="exp-card">
-            <div class="exp-num">02</div>
-            <h3 class="exp-title">Put Away</h3>
-            <p class="exp-sub">
-              <span class="lang-ja">いったん、しまう</span>
-              <span class="lang-en">Tuck Away</span>
-            </p>
-            <p class="exp-desc">
-              <span class="lang-ja">書き終わったメモは削除するのではなく、視界からそっと「しまい」ます。手元をすっきりと保てます。</span>
-              <span class="lang-en">Done with a note? Gently tuck it away without deleting it. Keep your view clean while preserving every thought.</span>
-            </p>
-          </div>
-
-          <div class="exp-card">
-            <div class="exp-num">03</div>
-            <h3 class="exp-title">Revisit</h3>
-            <p class="exp-sub">
-              <span class="lang-ja">静かに再会する</span>
-              <span class="lang-en">Quiet Reunion</span>
-            </p>
-            <p class="exp-desc">
-              <span class="lang-ja">今日、明日、来週など、必要なタイミングで自然に再浮上。通知やアラームで急かすことはありません。</span>
-              <span class="lang-en">Resurface notes today, tomorrow, or next week. No noisy alarms or red badges—just a natural reunion when the timing is right.</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Experience Visual Showcase -->
-      <div class="container-wide media-container">
-        <div class="screenshot-frame">
-          <img src="images/put-away-revisit-ja.png" alt="Qujott しまう と あとで見る (日本語)" class="screenshot-img lang-ja">
-          <img src="images/put-away-revisit-en.png" alt="Qujott Put Away and Revisit (English)" class="screenshot-img lang-en">
-        </div>
-        <p class="media-caption">
-          <span class="lang-ja">しまっても、なくならない。「しまう」と「あとで見る」で作業スペースを常にすっきりと保てます</span>
-          <span class="lang-en">Out of sight, never lost. Put notes away and bring them back naturally when you choose to revisit them.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- Focused Writing Section -->
-    <section class="section focus-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Distraction-Free</span>
-          <h2 class="section-title">
-            <span class="lang-ja">思考と向き合う、静かな時間。</span>
-            <span class="lang-en">Just you and your thoughts.</span>
-          </h2>
-          <p class="section-subtitle">
-            <span class="lang-ja">日常のメモに必要なMarkdown記法と、思考に深く潜るためのFocus Mode</span>
-            <span class="lang-en">Essential formatting and a dedicated single-pane space shaped around focused writing</span>
-          </p>
-        </div>
-
-        <p class="section-body">
-          <span class="lang-ja">
-            見出し、チェックリスト、表（テーブル）、引用など、日常のメモに必要な記法に対応しています。<br>
-            ワンクリックで1ペインの「Focus Mode」に切り替えれば、サイドバーもリストも静かに隠れ、思考と文字だけの静寂な空間が広がります。
-          </span>
-          <span class="lang-en">
-            Full support for essential writing: headings, checklists, tables, blockquotes, and links.<br>
-            Switch to single-pane Focus Mode anytime to gently hide the sidebar and memo list, creating a quiet sanctuary dedicated purely to writing.
-          </span>
-        </p>
-      </div>
-
-      <!-- Focus Visual Showcase -->
-      <div class="container-wide media-container">
-        <div class="screenshot-frame">
-          <img src="images/focus-mode-ja.png" alt="Qujott Focus Mode 集中モード (日本語)" class="screenshot-img lang-ja">
-          <img src="images/focus-mode-en.png" alt="Qujott Focus Mode (English)" class="screenshot-img lang-en">
-        </div>
-        <p class="media-caption">
-          <span class="lang-ja">メモ一覧を隠して執筆領域を広げる「1ペイン表示」と静音化で、目の前の言葉だけに没頭できるFocus Mode</span>
-          <span class="lang-en">Single-pane layout and quiet interface styling remove distractions, keeping your thoughts front and center.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- 1. Your Notes, Your Files Section -->
-    <section class="section notes-files-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Your Notes, Your Files</span>
-          <h2 class="section-title">
-            <span class="lang-ja">メモは、あなたのもの。</span>
-            <span class="lang-en">Your notes belong to you.</span>
-          </h2>
-          <p class="section-subtitle">
-            <span class="lang-ja">
-              Qujottは、標準的なMarkdown形式を採用しています。ノートは特定のアプリに縛られず、ほかのテキストエディタでも開いて編集できます。いつでも自分のデータとして扱える、長く使い続けられる雑記帳です。
-            </span>
-            <span class="lang-en">
-              Qujott uses standard Markdown files, so your notes are never locked into a proprietary format. Open and edit them with other text editors, and keep your data accessible for the long term.
-            </span>
-          </p>
-        </div>
-      </div>
-
-      <!-- No Lock-In Visual Showcase -->
-      <div class="container-wide media-container">
-        <div class="screenshot-frame">
-          <img src="images/no-lock-in-ja.png" alt="Qujott 標準Markdown形式・脱ロックイン (日本語)" class="screenshot-img lang-ja">
-          <img src="images/no-lock-in-en.png" alt="Qujott Standard Markdown Files (English)" class="screenshot-img lang-en">
-        </div>
-        <p class="media-caption">
-          <span class="lang-ja">独自のデータベースに縛られず、手元の資産として自由に持ち出せる標準Markdownファイル</span>
-          <span class="lang-en">Standard Markdown files with zero proprietary lock-in—accessible anywhere, anytime.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- 2. Editor Mode Section -->
-    <section class="section editor-mode-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Editor Mode</span>
-          <h2 class="section-title">
-            <span class="lang-ja">手元のMarkdownファイルを、直接開いて編集。</span>
-            <span class="lang-en">Open and edit your Markdown files directly.</span>
-          </h2>
-          <p class="section-subtitle">
-            <span class="lang-ja">
-              Qujottは、既存のMarkdownファイルをそのまま開いて編集できます。インポートや変換は不要。編集した内容は元のファイルに保存されます。Windows Explorerからダブルクリックするだけで素早く立ち上がり、軽量なテキストエディタとしても心地よく使えます。
-            </span>
-            <span class="lang-en">
-              Qujott lets you edit existing Markdown files without importing or converting them. Your changes are saved directly to the original file. Simply double-click any file in Windows Explorer for a fast, focused editing experience.
-            </span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Editor Mode UI Screenshot (Duplicates eliminated: single purposeful screenshot) -->
-      <div class="container-wide media-container">
-        <div class="screenshot-frame">
-          <img src="images/editor-mode-direct-ja.png" alt="Qujott Editor Mode Explorer連携・直接編集 (日本語)" class="screenshot-img lang-ja">
-          <img src="images/editor-mode-direct-en.png" alt="Qujott Editor Mode Direct Editing from File Explorer (English)" class="screenshot-img lang-en">
-        </div>
-        <p class="media-caption">
-          <span class="lang-ja">インポート不要。エクスプローラーから直接開き、Ctrl+Sで元のファイルへ上書き保存</span>
-          <span class="lang-en">Open instantly from File Explorer and save directly in-place with Ctrl+S—no database import needed.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- 3. Shared Folder Section -->
-    <section class="section shared-folder-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Shared Folder</span>
-          <h2 class="section-title">
-            <span class="lang-ja">好きなフォルダに保管して、自由に管理できる。</span>
-            <span class="lang-en">Store and manage your notes in any folder you choose.</span>
-          </h2>
-          <p class="section-subtitle">
-            <span class="lang-ja">
-              ノートの保管場所は、あなたが選んだフォルダで管理できます。完全ローカルのフォルダでプライベートに使い続けることも、OneDriveなどの共有・同期フォルダを利用して複数PCから同じノートを扱うことも可能。利用環境や好みに合わせて、自由に保存場所を選べます。
-            </span>
-            <span class="lang-en">
-              Keep your notes organized in any folder you prefer. Store them entirely locally for maximum privacy, or connect to sync services like OneDrive to work seamlessly across multiple PCs. Choose the storage location that fits your workflow.
-            </span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Shared Folder Showcase Screenshot -->
-      <div class="container-wide media-container">
-        <div class="screenshot-frame">
-          <img src="images/storage-choice-ja.png" alt="Qujott Shared Folder フォルダ選択 (日本語)" class="screenshot-img lang-ja">
-          <img src="images/storage-choice-en.png" alt="Qujott Storage Choice in Any Folder (English)" class="screenshot-img lang-en">
-        </div>
-        <p class="media-caption">
-          <span class="lang-ja">ローカル保存、クラウド同期フォルダ、外部ドライブなど、ノートの保管場所はあなたの自由</span>
-          <span class="lang-en">Local folders, cloud-synced folders, or external drives—you choose where your notes live.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- Personalization & Comfort Section -->
-    <section class="section custom-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Personalization &amp; Comfort</span>
-          <h2 class="section-title">Make Qujott yours.</h2>
-          <p class="section-subtitle">
-            <span class="lang-ja">自分好みの佇まいと、画面に合わせた最適な表示倍率</span>
-            <span class="lang-en">Personalize your writing environment and display scale</span>
-          </p>
-        </div>
-
-        <p class="section-body">
-          <span class="lang-ja">
-            <strong>Qujott</strong> は、思考を書き留めるメモ機能、Markdown編集、Focus Mode、Put Away、Revisit、Shared Folder、ローカル保存など、本質的な道具としての機能をすべて無料で提供します。広告もサブスクリプションもありません。<br><br>
-            <strong>UI表示倍率（UI Scale・v1.2.0 新機能）</strong><br>
-            お使いのPCや高解像度モニターに合わせて、アプリ全体のUI表示倍率を <strong>80% / 100%（標準） / 120% / 140% / 160%</strong> から選べるようになりました。編集本文の文字サイズ調整（A--〜A++）とも自然に連動し、どんな画面環境でも快適な視認性で執筆できます。<br><br>
-            <strong>Qujott Pro（US $4.99 / 買い切り）</strong><br>
-            毎日使う道具を自分好みの空間に仕立てるための外観カスタマイズです。桜（Sakura）やすりガラス効果が美しく溶け込むAtmosphere Scenes、紙の温もりを感じるPaperテーマなど、気分や部屋の明かりに合わせた佇まいを選べます。機能を制限して買わせるためではなく、「自分のQujottにしたい」と感じたときにお選びいただけるProです。
-          </span>
-          <span class="lang-en">
-            <strong>Qujott</strong> provides all essential experiences—Immediate Capture, Focus Mode, Put Away, Revisit, Markdown editing, and local-first storage. Completely free with no ads and no subscriptions.<br><br>
-            <strong>UI Display Scaling (New in v1.2.0)</strong><br>
-            Adjust the overall UI scale (<strong>80%, 100% Default, 120%, 140%, 160%</strong>) to fit your display and monitor resolution. Seamlessly combines with editor text sizing (A-- to A++) so you can write comfortably in any environment.<br><br>
-            <strong>Qujott Pro (US $4.99 / One-Time Purchase)</strong><br>
-            Personalize your workspace with immersive Atmosphere Scenes (such as Sakura), frosted glass depth, and paper-inspired themes. An aesthetic invitation to make your daily writing tool feel calm, comfortable, and truly yours.
-          </span>
-        </p>
-      </div>
-
-      <!-- Pro Visual Showcase -->
-      <div class="container-wide media-container">
-        <div class="screenshot-frame">
-          <img src="images/qujott-custom-ja.png" alt="Qujott 外観カスタマイズ Atmosphere Scene (Sakura) (日本語)" class="screenshot-img lang-ja">
-          <img src="images/qujott-custom-en.png" alt="Qujott Pro Appearance Customization with Sakura Scene (English)" class="screenshot-img lang-en">
-        </div>
-        <p class="media-caption">
-          <span class="lang-ja">すりガラスが美しく溶け込むAtmosphere Scenes（Sakura）と、画面に合わせた表示倍率調整</span>
-          <span class="lang-en">A writing space that feels like your own. Personalize it with Atmosphere Scenes and custom display scaling.</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- Platforms Section -->
-    <section class="section platforms-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Platforms</span>
-          <h2 class="section-title">
-            <span class="lang-ja">思考を、すぐそばに。</span>
-            <span class="lang-en">Keep your thoughts close.</span>
-          </h2>
-        </div>
-
-        <div class="platform-list">
-          <div class="platform-item">
-            <span class="platform-name">Windows</span>
-            <span class="platform-status status-now">
-              <span class="lang-ja">利用可能 (v1.2.0)</span>
-              <span class="lang-en">Available now (v1.2.0)</span>
-            </span>
-          </div>
-          <div class="platform-item">
-            <span class="platform-name">Mac</span>
-            <span class="platform-status status-soon">
-              <span class="lang-ja">開発中</span>
-              <span class="lang-en">In development</span>
-            </span>
-          </div>
-          <div class="platform-item">
-            <span class="platform-name">iPhone / iPad</span>
-            <span class="platform-status status-soon">
-              <span class="lang-ja">開発中</span>
-              <span class="lang-en">In development</span>
-            </span>
-          </div>
-          <div class="platform-item">
-            <span class="platform-name">Android</span>
-            <span class="platform-status status-considering">
-              <span class="lang-ja">検討中</span>
-              <span class="lang-en">Considering</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Minimal Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="language-switch">
-        <span class="lang-label">Language</span>
-        <button type="button" class="lang-btn active" data-lang="ja" onclick="setLanguage('ja')">日本語</button>
-        <span class="lang-divider">/</span>
-        <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')">English</button>
-      </div>
-
-      <div class="footer-brand">Qujott — Quiet Jotter.</div>
-      <div class="footer-links">
-        <span class="footer-item active">Official Website</span>
-        <span class="divider">•</span>
-        <a href="experience.html" class="footer-item">Web Experience</a>
-        <span class="divider">•</span>
-        <a href="releases.html" class="footer-item">Release Notes</a>
-        <span class="divider">•</span>
-        <a href="privacy.html" class="footer-item">Privacy Policy</a>
-        <span class="divider">•</span>
-        <a href="terms.html" class="footer-item">Terms of Use</a>
-        <span class="divider">•</span>
-        <a href="mailto:support@qujott.com" class="footer-item">Contact Us</a>
-        <span class="divider">•</span>
-        <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="footer-item">Microsoft Store</a>
-      </div>
-      <div class="copyright">
-        &copy; 2026 Qujott. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <!-- Language Switch Script -->
-  <script>
-    function setLanguage(lang) {
-      document.documentElement.lang = lang;
-      try {
-        localStorage.setItem('qujott-lang', lang);
-      } catch (e) {}
-      document.querySelectorAll('.lang-btn').forEach(function(btn) {
-        if (btn.getAttribute('data-lang') === lang) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
-    }
-
-    (function initLanguage() {
+    (function() {
+      var supported = ['ja', 'en', 'es', 'pt-br', 'de', 'fr', 'ko', 'zh-tw'];
       var saved = null;
       try {
         saved = localStorage.getItem('qujott-lang');
       } catch (e) {}
-      if (!saved) {
-        saved = (navigator.language && navigator.language.indexOf('ja') === 0) ? 'ja' : 'en';
+
+      var targetLang = null;
+      if (saved && supported.indexOf(saved) !== -1) {
+        targetLang = saved;
+      } else {
+        var userLangs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+        for (var i = 0; i < userLangs.length; i++) {
+          var code = (userLangs[i] || '').toLowerCase();
+          if (code.startsWith('ja')) { targetLang = 'ja'; break; }
+          if (code.startsWith('zh-tw') || code.startsWith('zh-hk') || code.startsWith('zh-mo') || code.startsWith('zh-hant')) { targetLang = 'zh-tw'; break; }
+          if (code.startsWith('ko')) { targetLang = 'ko'; break; }
+          if (code.startsWith('es')) { targetLang = 'es'; break; }
+          if (code.startsWith('pt')) { targetLang = 'pt-br'; break; }
+          if (code.startsWith('de')) { targetLang = 'de'; break; }
+          if (code.startsWith('fr')) { targetLang = 'fr'; break; }
+          if (code.startsWith('en')) { targetLang = 'en'; break; }
+        }
       }
-      setLanguage(saved);
+      if (!targetLang) {
+        targetLang = 'en';
+      }
+      window.location.replace(targetLang + '/');
     })();
   </script>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 48px 24px; text-align: center; color: #1d1d1f; background: #fafafa;">
+  <noscript>
+    <h1 style="font-size: 24px; margin-bottom: 12px; font-weight: 600;">Qujott — Quiet Jotter</h1>
+    <p style="font-size: 16px; margin-bottom: 24px; color: #555;">Redirecting to Qujott in English...</p>
+    <p><a href="en/" style="display: inline-block; padding: 10px 20px; background: #1d1d1f; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 500;">Continue to English</a></p>
+    <p style="margin-top: 36px; font-size: 13px; color: #888; line-height: 2;">
+      Languages:
+      <a href="ja/" style="color: #444; margin: 0 4px;">日本語</a> •
+      <a href="en/" style="color: #444; margin: 0 4px;">English</a> •
+      <a href="es/" style="color: #444; margin: 0 4px;">Español</a> •
+      <a href="pt-br/" style="color: #444; margin: 0 4px;">Português (Brasil)</a> •
+      <a href="de/" style="color: #444; margin: 0 4px;">Deutsch</a> •
+      <a href="fr/" style="color: #444; margin: 0 4px;">Français</a> •
+      <a href="ko/" style="color: #444; margin: 0 4px;">한국어</a> •
+      <a href="zh-tw/" style="color: #444; margin: 0 4px;">繁體中文</a>
+    </p>
+  </noscript>
 </body>
 </html>

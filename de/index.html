@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qujott — Gedanken sofort festhalten und jederzeit wiederfinden</title>
+  <meta name="description" content="Qujott ist ein leichtes Notizbuch, das die Unkompliziertheit eines Notizblocks mit der Freiheit von Standard-Markdown verbindet.">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Canonical & Multilingual Hreflang -->
+  <link rel="canonical" href="https://qujott.com/de/">
+  <link rel="alternate" hreflang="x-default" href="https://qujott.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://qujott.com/ja/">
+  <link rel="alternate" hreflang="en" href="https://qujott.com/en/">
+  <link rel="alternate" hreflang="es" href="https://qujott.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/">
+  <link rel="alternate" hreflang="de" href="https://qujott.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://qujott.com/fr/">
+  <link rel="alternate" hreflang="ko" href="https://qujott.com/ko/">
+  <link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/">
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="Ba4p3ZzvcM0wk_723Eq8o8l4pbdrR7qrbykzYvb2q4Y">
+  
+  <!-- Favicon & Touch Icon -->
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../images/app-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Qujott — Gedanken sofort festhalten und jederzeit wiederfinden">
+  <meta property="og:description" content="Ein schlankes digitales Notizbuch mit Markdown-Freiheit. Später sortieren. Gedanken nah bei sich behalten.">
+  <meta property="og:image" content="../images/hero-two-pane-de.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qujott.com/de/">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7P35Y3G9J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R7P35Y3G9J');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yj6hat2i6m");
+  </script>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- Top Tagline Bar -->
+  <header class="top-tagline-bar">
+    <div class="container top-bar-inner">
+      <a href="./" class="top-brand-link">
+        <img src="../images/app-icon.png" alt="Qujott Icon" class="top-brand-icon">
+        <span class="tagline-primary">Quiet Jotter.</span>
+      </a>
+      <div class="language-select-wrapper">
+        <svg class="lang-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <label for="lang-select-header" class="visually-hidden">Language</label>
+        <select id="lang-select-header" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="de" selected>Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="zh-tw">繁體中文</option>
+        </select>
+        <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <div class="brand">
+          <img src="../images/app-icon.png" alt="Qujott App Icon" class="hero-icon-large">
+          <h1 class="app-title">Qujott</h1>
+          <p class="hero-heading">Ideen sofort festhalten, <br class="desktop-break">und jederzeit entspannt wiederfinden.</p>
+        </div>
+
+        <p class="hero-description">
+          Qujott vereint die Schlichtheit eines Notizblocks mit der Vielseitigkeit eines Texteditors in einem leichten digitalen Notizbuch.<br>Später sortieren. Gedanken nah bei sich behalten.<br>
+          <span class="hero-subtext">Unterstützt Standard-Markdown. Speichere und bearbeite Notizen als reine Textdateien am Ort deiner Wahl.</span>
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
+            </svg>
+            <span>Für Windows herunterladen</span>
+          </a>
+          <a href="../experience.html" class="btn btn-secondary btn-experience">
+            <span>Qujott ausprobieren</span>
+            <span class="badge badge-experience">Experience</span>
+          </a>
+          <div class="btn btn-disabled">
+            Mac <span class="badge"><span>In Entwicklung</span></span>
+          </div>
+          <div class="btn btn-disabled">
+            iPhone / iPad <span class="badge"><span>In Entwicklung</span></span>
+          </div>
+          <div class="btn btn-disabled">
+            Android <span class="badge"><span>In Prüfung</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/hero-two-pane-de.png" alt="Ein ruhiger Zwei-Spalten-Bereich, der Gedanken und Notizliste stets im Blick behält" class="screenshot-img">
+        </div>
+        <p class="media-caption">Ein ruhiger Zwei-Spalten-Bereich, der Gedanken und Notizliste stets im Blick behält</p>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section philosophy-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Philosophie</span>
+          <h2 class="section-title">Wie ein Papierblock neben deiner Tastatur.</h2>
+        </div>
+        <p class="section-body">
+          Qujott ist weder eine überladene Datenbank noch ein kompliziertes Aufgabenwerkzeug.<br>Wie ein echter Papiernotizblock auf dem Schreibtisch dient es einem einzigen Zweck: sofort drauflosschreiben, wenn ein Gedanke aufkommt.<br><br>
+          Kein Zwang zu Ordnerstrukturen oder Verschlagwortung vor dem Schreiben.<br>Gedanken einfach festhalten und griffbereit halten. Sortieren kannst du später in Ruhe.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. Put Away & Revisit Section -->
+    <section class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Put Away & Revisit</span>
+          <h2 class="section-title">Notizen sanft ablegen und zur rechten Zeit wiedersehen.</h2>
+        </div>
+        <p class="section-body">Notiz fertig? Lege sie beiseite (Put Away), ohne sie zu löschen, um den Blick frei zu halten.<br>Mit Revisit lässt du Notizen heute, morgen oder nächste Woche wieder oben erscheinen. Ohne laute Wecker – eine natürliche Rückkehr zur passenden Zeit.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/put-away-revisit-de.png" alt="Notizen beiseitelegen für klare Sicht und zur passenden Zeit wiederbegegnen" class="screenshot-img">
+        </div>
+        <p class="media-caption">Notizen beiseitelegen für klare Sicht und zur passenden Zeit wiederbegegnen</p>
+      </div>
+    </section>
+
+    <!-- 2. Focus Mode Section -->
+    <section class="section focus-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Focus Mode</span>
+          <h2 class="section-title">Vollkommen in deine Gedanken eintauchen.</h2>
+        </div>
+        <p class="section-body">Wechsle in den einspaltigen Focus Mode, um Seitenleisten und Ablenkungen auszublenden.<br>Eine ruhige, minimalistische Schreibumgebung, geschaffen für ungestörtes Nachdenken und Verfassen.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/focus-mode-de.png" alt="Der Focus Mode blendet alles Überflüssige aus für pure Konzentration aufs Wort" class="screenshot-img">
+        </div>
+        <p class="media-caption">Der Focus Mode blendet alles Überflüssige aus für pure Konzentration aufs Wort</p>
+      </div>
+    </section>
+
+    <!-- 3. Plain Markdown (No Lock-In) Section -->
+    <section class="section notes-files-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Plain Markdown</span>
+          <h2 class="section-title">Deine Worte gehören dir.</h2>
+        </div>
+        <p class="section-body">Alle Notizen in Qujott werden als Standard-Markdown-Dateien (.md) gespeichert.<br>Kein proprietäres Format, keine Bindung. Öffne, bearbeite und sichere deine Notizen jederzeit in jedem Texteditor.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/no-lock-in-de.png" alt="Notizen als Standard-Markdown (.md). Volle Freiheit beim Lesen, Bearbeiten und Exportieren" class="screenshot-img">
+        </div>
+        <p class="media-caption">Notizen als Standard-Markdown (.md). Volle Freiheit beim Lesen, Bearbeiten und Exportieren</p>
+      </div>
+    </section>
+
+    <!-- 4. Editor Mode Section -->
+    <section class="section editor-mode-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Editor Mode</span>
+          <h2 class="section-title">Bestehende Markdown-Dateien direkt öffnen und bearbeiten.</h2>
+        </div>
+        <p class="section-body">Öffne vorhandene Markdown-Dateien direkt in Qujott, bearbeite sie und speichere Änderungen mit Strg+S in der Originaldatei.<br>Kein Import oder Formatwechsel erforderlich. Nutze Qujott als deinen leichten Markdown-Editor im Alltag.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/editor-mode-direct-de.png" alt="Markdown-Dateien direkt in Qujott öffnen, bearbeiten und im Original speichern (Editor Mode)" class="screenshot-img">
+        </div>
+        <p class="media-caption">Markdown-Dateien direkt in Qujott öffnen, bearbeiten und im Original speichern (Editor Mode)</p>
+      </div>
+    </section>
+
+    <!-- 5. Storage Choice Section -->
+    <section class="section shared-folder-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Storage Choice</span>
+          <h2 class="section-title">Du bestimmst, wo deine Notizen leben.</h2>
+        </div>
+        <p class="section-body">Wähle ein beliebiges Verzeichnis auf deinem PC: Lokale Ordner, bestehende Cloud-Ordner oder externe Laufwerke.<br>Du kannst Qujott nutzen, ohne ein Cloud-Konto erstellen oder dich anmelden zu müssen.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/storage-choice-de.png" alt="Freie Wahl des Speicherorts: Lokale Ordner, Cloud-Synchronisation oder externe Laufwerke" class="screenshot-img">
+        </div>
+        <p class="media-caption">Freie Wahl des Speicherorts: Lokale Ordner, Cloud-Synchronisation oder externe Laufwerke</p>
+      </div>
+    </section>
+
+    <!-- 6. Personalization & Comfort Section -->
+    <section class="section custom-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Personalisierung</span>
+          <h2 class="section-title">Gestalte deinen persönlichen Schreibraum.</h2>
+        </div>
+        <p class="section-body">Gestalte deine Umgebung mit stimmungsvollen Atmosphären-Szenen (wie Sakura), Milchglaseffekten und Papierthemen (Qujott Pro, Einmalkauf).<br>Mit der UI-Skalierung (80 % bis 160 %) passt du die Anzeige optimal an deinen Monitor an.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/qujott-custom-de.png" alt="Ein Schreibraum, der sich vertraut anfühlt. Gestalte ihn mit Szenen und UI-Skalierung." class="screenshot-img">
+        </div>
+        <p class="media-caption">Ein Schreibraum, der sich vertraut anfühlt. Gestalte ihn mit Szenen und UI-Skalierung.</p>
+      </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="section platforms-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Plattformen</span>
+          <h2 class="section-title">Gedanken immer in Reichweite.</h2>
+        </div>
+
+        <div class="platform-list">
+          <div class="platform-item">
+            <span class="platform-name">Windows</span>
+            <span class="platform-status status-now">Jetzt verfügbar (v1.2.0)</span>
+          </div>
+          <div class="platform-item">
+            <span class="platform-name">Mac</span>
+            <span class="platform-status status-soon">In Entwicklung</span>
+          </div>
+          <div class="platform-item">
+            <span class="platform-name">iPhone / iPad</span>
+            <span class="platform-status status-soon">In Entwicklung</span>
+          </div>
+          <div class="platform-item">
+            <span class="platform-name">Android</span>
+            <span class="platform-status status-considering">In Prüfung</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="language-select-wrapper">
+        <svg class="lang-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <label for="lang-select-footer" class="visually-hidden">Language</label>
+        <select id="lang-select-footer" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="de" selected>Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="zh-tw">繁體中文</option>
+        </select>
+        <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
+      <div class="footer-brand">Qujott — Quiet Jotter.</div>
+      <div class="footer-links">
+        <span class="footer-item active">Offizielle Website</span>
+        <span class="divider">•</span>
+        <a href="../experience.html" class="footer-item">Web Experience</a>
+        <span class="divider">•</span>
+        <a href="releases.html" class="footer-item">Versionshinweise</a>
+        <span class="divider">•</span>
+        <a href="../privacy.html" class="footer-item">Datenschutzerklärung</a>
+        <span class="divider">•</span>
+        <a href="../terms.html" class="footer-item">Nutzungsbedingungen</a>
+        <span class="divider">•</span>
+        <a href="mailto:support@qujott.com" class="footer-item">Kontakt</a>
+        <span class="divider">•</span>
+        <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="footer-item">Microsoft Store</a>
+      </div>
+      <div class="copyright">
+        © 2026 Qujott. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Language Switch Script -->
+  <script>
+    function changeLanguage(lang) {
+      try {
+        localStorage.setItem('qujott-lang', lang);
+      } catch (e) {}
+      window.location.href = '../' + lang + '/';
+    }
+    try {
+      localStorage.setItem('qujott-lang', 'de');
+    } catch (e) {}
+  </script>
+</body>
+</html>

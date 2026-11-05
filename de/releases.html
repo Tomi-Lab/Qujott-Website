@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Versionshinweise — Qujott</title>
+  <meta name="description" content="Erfahre, was in den neuesten Versionen von Qujott hinzugefügt und verbessert wurde.">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Canonical & Multilingual Hreflang -->
+  <link rel="canonical" href="https://qujott.com/de/releases.html">
+  <link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html">
+  <link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html">
+  <link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html">
+  <link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html">
+  <link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html">
+  <link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html">
+  <link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html">
+
+  <!-- Favicon & Touch Icon -->
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../images/app-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Versionshinweise — Qujott">
+  <meta property="og:description" content="Erfahre, was in den neuesten Versionen von Qujott hinzugefügt und verbessert wurde.">
+  <meta property="og:image" content="../images/hero-two-pane-de.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qujott.com/de/releases.html">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7P35Y3G9J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R7P35Y3G9J');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yj6hat2i6m");
+  </script>
+
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .release-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 36px;
+      width: 100%;
+    }
+
+    .release-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: left;
+    }
+
+    .release-card.latest {
+      border-color: rgba(220, 163, 17, 0.4);
+      box-shadow: 0 6px 24px rgba(220, 163, 17, 0.06);
+    }
+
+    .release-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .release-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .release-version {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .release-badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: rgba(220, 163, 17, 0.12);
+      color: #b5830b;
+      letter-spacing: 0.3px;
+    }
+
+    .release-date {
+      font-size: 13px;
+      color: var(--text-subtle);
+      font-weight: 500;
+    }
+
+    .release-section {
+      margin-bottom: 8px;
+    }
+
+    .release-section-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 14px;
+      letter-spacing: -0.2px;
+    }
+
+    .release-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .release-list li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .release-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--text-subtle);
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .release-list li strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .back-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    .back-home-link:hover {
+      color: var(--text-main);
+    }
+
+    @media (max-width: 768px) {
+      .release-card {
+        padding: 24px 20px;
+      }
+      .release-version {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Tagline Bar -->
+  <header class="top-tagline-bar">
+    <div class="container top-bar-inner">
+      <a href="./" class="top-brand-link">
+        <svg class="icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span class="tagline-primary">Qujott</span>
+      </a>
+      <div class="language-select-wrapper">
+        <svg class="lang-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <label for="lang-select-header" class="visually-hidden">Language</label>
+        <select id="lang-select-header" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="de" selected>Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="zh-tw">繁體中文</option>
+        </select>
+        <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" style="padding-bottom: 32px;">
+      <div class="container hero-content">
+        <h1 class="app-title" style="font-size: 38px; margin-bottom: 8px;">Versionshinweise</h1>
+        <p class="hero-description" style="max-width: 540px; margin-bottom: 24px;">
+          Erfahre, was in den neuesten Versionen von Qujott hinzugefügt und verbessert wurde.
+        </p>
+      </div>
+
+      <div class="container" style="max-width: 760px;">
+        <div class="release-timeline">
+        <!-- Qujott 1.2.0 -->
+        <article class="release-card latest">
+          <div class="release-header">
+            <div class="release-title-row">
+              <span class="release-version">Qujott 1.2.0</span>
+              <span class="release-badge">Neueste Version</span>
+            </div>
+            <span class="release-date">November 2026</span>
+          </div>
+
+          <div class="release-section">
+            <h2 class="release-section-title">✨ Neue Funktionen & Verbesserungen</h2>
+            <ul class="release-list">
+                <li>
+                  <strong>UI-Skalierung (UI Scale) für Windows:</strong><br>
+                  Passe die Gesamtgröße der Benutzeroberfläche in 5 Stufen (80 %, 100 %, 120 %, 140 %, 160 %) an deinen Bildschirm an. Verbessert die Lesbarkeit von Menüs, Symbolleisten und Notizlisten auf Monitoren jeder Auflösung.
+                </li>
+                <li>
+                  <strong>Harmonische Textgrößenanpassung:</strong><br>
+                  Funktioniert unabhängig und nahtlos mit den Schriftgrößeneinstellungen des Editors (A-- bis A++) für maximalen Lesekomfort.
+                </li>
+                <li>
+                  <strong>Layout- und Randoptimierung:</strong><br>
+                  Beseitigung unschöner Randabstände bei 80 % und optimierte Tastenabstände bei höheren Skalierungsstufen.
+                </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Qujott 1.1.1 -->
+        <article class="release-card">
+          <div class="release-header">
+            <div class="release-title-row">
+              <span class="release-version">Qujott 1.1.1</span>
+              
+            </div>
+            <span class="release-date">Oktober 2026</span>
+          </div>
+
+          <div class="release-section">
+            <h2 class="release-section-title">✨ Verbesserungen & Fehlerbehebungen</h2>
+            <ul class="release-list">
+                <li>
+                  <strong>Direktstart von Dateien im Editor Mode:</strong><br>
+                  Höhere Zuverlässigkeit beim Öffnen externer Markdown-Dateien (.md, .markdown, .txt) direkt im Editor Mode.
+                </li>
+                <li>
+                  <strong>Eigene Fensterpositions-Erinnerung:</strong><br>
+                  Größe und Position des Fensters für externe Bearbeitungssitzungen werden nun separat und zuverlässig gespeichert.
+                </li>
+                <li>
+                  <strong>Allgemeine Leistungsoptimierung:</strong><br>
+                  Feinschliff für flüssiges Tippen und hohe Stabilität.
+                </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Qujott 1.1.0 -->
+        <article class="release-card">
+          <div class="release-header">
+            <div class="release-title-row">
+              <span class="release-version">Qujott 1.1.0</span>
+              
+            </div>
+            <span class="release-date">Oktober 2026</span>
+          </div>
+
+          <div class="release-section">
+            <h2 class="release-section-title">✨ Highlights & Verbesserungen</h2>
+            <ul class="release-list">
+                <li>
+                  <strong>7-tägige kostenlose Pro-Testversion:</strong><br>
+                  Teste alle Papierthemen und Atmosphären-Szenen 7 Tage lang kostenlos und unverbindlich – ganz ohne Konto oder Vorabzahlung.
+                </li>
+                <li>
+                  <strong>Versionshinweise in der App ("Was ist neu"):</strong><br>
+                  Neue Funktionen direkt in den Einstellungen unter "Über" einsehen.
+                </li>
+                <li>
+                  <strong>Zuverlässige Wiederherstellung der Fensteransicht:</strong><br>
+                  Fensterkoordinaten, Einspalten-Ansichten und maximierte Zustände werden beim Start flüssig und ohne Flackern wiederhergestellt.
+                </li>
+                <li>
+                  <strong>Blitzschneller Start:</strong><br>
+                  Gezielte Optimierung des Startpfads für unvermindert rasanten Start im Millisekundenbereich.
+                </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Qujott 1.0.0 -->
+        <article class="release-card">
+          <div class="release-header">
+            <div class="release-title-row">
+              <span class="release-version">Qujott 1.0.0</span>
+              
+            </div>
+            <span class="release-date">September 2026</span>
+          </div>
+
+          <div class="release-section">
+            <h2 class="release-section-title">🎉 Erstveröffentlichung</h2>
+            <ul class="release-list">
+                <li>
+                  <strong>Minimalistische Gedankenerfassung:</strong><br>
+                  Ein ruhiger, schneller und ablenkungsfreier Markdown-Notizblock direkt neben deinen Gedanken.
+                </li>
+                <li>
+                  <strong>Put Away & Revisit:</strong><br>
+                  Notizen sanft beiseitelegen, um den Kopf frei zu bekommen, und zur passenden Zeit wiedersehen.
+                </li>
+                <li>
+                  <strong>Freie lokale Dateispeicherung:</strong><br>
+                  Notizen in jedem beliebigen Ordner deines PCs als Standard-Markdown (.md) ablegen – ohne Bindung.
+                </li>
+                <li>
+                  <strong>Qujott Pro:</strong><br>
+                  Einmaliger Kauf zur Freischaltung exklusiver Papierthemen und stimmungsvoller Atmosphären-Szenen.
+                </li>
+            </ul>
+          </div>
+        </article>
+        </div>
+
+        <div style="margin-top: 48px; text-align: center;">
+          <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex;">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
+            </svg>
+            <span>Qujott im Microsoft Store holen</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="language-select-wrapper">
+        <svg class="lang-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <label for="lang-select-footer" class="visually-hidden">Language</label>
+        <select id="lang-select-footer" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="de" selected>Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="zh-tw">繁體中文</option>
+        </select>
+        <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
+      <div class="footer-brand">Qujott — Quiet Jotter.</div>
+      <div class="footer-links">
+        <a href="./" class="footer-item">Offizielle Website</a>
+        <span class="divider">•</span>
+        <a href="../experience.html" class="footer-item">Web Experience</a>
+        <span class="divider">•</span>
+        <span class="footer-item active">Versionshinweise</span>
+        <span class="divider">•</span>
+        <a href="../privacy.html" class="footer-item">Datenschutzerklärung</a>
+        <span class="divider">•</span>
+        <a href="../terms.html" class="footer-item">Nutzungsbedingungen</a>
+        <span class="divider">•</span>
+        <a href="mailto:support@qujott.com" class="footer-item">Kontakt</a>
+        <span class="divider">•</span>
+        <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="footer-item">Microsoft Store</a>
+      </div>
+      <div class="copyright">
+        © 2026 Qujott. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Language Switch Script -->
+  <script>
+    function changeLanguage(lang) {
+      try {
+        localStorage.setItem('qujott-lang', lang);
+      } catch (e) {}
+      window.location.href = '../' + lang + '/releases.html';
+    }
+    try {
+      localStorage.setItem('qujott-lang', 'de');
+    } catch (e) {}
+  </script>
+</body>
+</html>

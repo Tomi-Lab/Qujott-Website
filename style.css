@@ -661,3 +661,67 @@ html[lang="en"] .lang-ja {
     width: 100%;
   }
 }
+
+/* 8. Multilingual Language Selector */
+.language-select-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: var(--btn-bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: 99px;
+  padding: 0 10px 0 8px;
+  height: 32px;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.language-select-wrapper:hover,
+.language-select-wrapper:focus-within {
+  border-color: var(--text-muted);
+  background-color: var(--bg-card);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.lang-icon {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  pointer-events: none;
+  margin-right: 5px;
+}
+
+.lang-dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-main);
+  cursor: pointer;
+  padding: 0 16px 0 0;
+  line-height: 1;
+}
+
+.lang-arrow {
+  position: absolute;
+  right: 8px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+

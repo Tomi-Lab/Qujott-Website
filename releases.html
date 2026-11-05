@@ -1,505 +1,71 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Release Notes — Qujott</title>
   <meta name="description" content="Qujott updates and version history. See what's new in each release.">
-  <meta name="theme-color" content="#ffffff">
-  
-  <!-- Favicon & Touch Icon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="images/app-icon.png">
-
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Release Notes — Qujott">
-  <meta property="og:description" content="Qujottの更新履歴と最新機能のご案内。">
-  <meta property="og:image" content="images/hero-two-pane.png">
-  <meta property="og:type" content="website">
-  
-  <!-- Google Fonts: Inter & Outfit -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7P35Y3G9J"></script>
+  <link rel="canonical" href="https://qujott.com/en/releases.html">
+  <link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html">
+  <link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html">
+  <link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html">
+  <link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html">
+  <link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html">
+  <link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html">
+  <link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html">
+  <link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html">
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=en/releases.html">
+  </noscript>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-R7P35Y3G9J');
-  </script>
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "yj6hat2i6m");
-  </script>
-
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .release-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      margin-top: 36px;
-      width: 100%;
-    }
-
-    .release-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-light);
-      border-radius: 16px;
-      padding: 32px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-align: left;
-    }
-
-    .release-card.latest {
-      border-color: rgba(220, 163, 17, 0.4);
-      box-shadow: 0 6px 24px rgba(220, 163, 17, 0.06);
-    }
-
-    .release-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border-light);
-    }
-
-    .release-title-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .release-version {
-      font-family: var(--font-heading);
-      font-size: 26px;
-      font-weight: 700;
-      color: var(--text-main);
-      letter-spacing: -0.5px;
-    }
-
-    .release-badge {
-      font-size: 11px;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 20px;
-      background: rgba(220, 163, 17, 0.12);
-      color: #b5830b;
-      letter-spacing: 0.3px;
-    }
-
-    .release-date {
-      font-size: 13px;
-      color: var(--text-subtle);
-      font-weight: 400;
-    }
-
-    .release-section {
-      margin-top: 18px;
-    }
-
-    .release-section-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .release-list {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .release-list li {
-      position: relative;
-      padding-left: 20px;
-      font-size: 14.5px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .release-list li::before {
-      content: "•";
-      position: absolute;
-      left: 6px;
-      color: var(--text-subtle);
-      font-size: 16px;
-      line-height: 1.4;
-    }
-
-    .release-list li strong {
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      .release-card {
-        padding: 24px 20px;
-      }
-      .release-version {
-        font-size: 22px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Top Tagline Bar -->
-  <header class="top-tagline-bar">
-    <div class="container top-bar-inner">
-      <a href="index.html" class="top-brand-link">
-        <svg class="icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        <span class="tagline-primary">Qujott</span>
-      </a>
-      <div class="language-switch">
-        <span class="lang-label">Lang</span>
-        <button type="button" class="lang-btn active" data-lang="ja" onclick="setLanguage('ja')">JP</button>
-        <span class="lang-divider">/</span>
-        <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-      </div>
-    </div>
-  </header>
-
-  <main class="hero-section" style="padding-top: 48px; padding-bottom: 80px;">
-    <div class="container hero-content" style="align-items: flex-start; text-align: left;">
-      <h1 class="app-title" style="font-size: 2.5rem; margin-bottom: 8px;">
-        <span class="lang-ja">更新履歴</span>
-        <span class="lang-en">Release Notes</span>
-      </h1>
-      <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 8px;">
-        <span class="lang-ja">Qujott の最新アップデートと改善内容をお知らせします。</span>
-        <span class="lang-en">Learn what’s new and improved in the latest versions of Qujott.</span>
-      </p>
-
-      <div class="release-timeline">
-        <!-- Version 1.2.0 -->
-        <article class="release-card latest">
-          <div class="release-header">
-            <div class="release-title-row">
-              <span class="release-version">Qujott 1.2.0</span>
-              <span class="release-badge">
-                <span class="lang-ja">最新版</span>
-                <span class="lang-en">Latest</span>
-              </span>
-            </div>
-            <span class="release-date">
-              <span class="lang-ja">2026年11月</span>
-              <span class="lang-en">November 2026</span>
-            </span>
-          </div>
-
-          <!-- JA -->
-          <div class="lang-ja">
-            <div class="release-section">
-              <h2 class="release-section-title">✨ 新機能 &amp; 機能改善</h2>
-              <ul class="release-list">
-                <li>
-                  <strong>UI表示倍率（UI Scale）機能の追加（Windows版）:</strong><br>
-                  PCの画面環境に合わせて、設定画面からアプリ全体のUI表示倍率（80% / 100% / 120% / 140% / 160%）を調整できるようになりました。メニュー、ツールバー、ノート一覧、設定画面などUI全体の視認性・操作性が向上します。
-                </li>
-                <li>
-                  <strong>本文文字サイズとの連動調整:</strong><br>
-                  編集本文の文字サイズ変更（A--〜A++）もUI倍率と自然に連動し、高解像度モニターでも快適な文字サイズで執筆できます。
-                </li>
-                <li>
-                  <strong>レイアウトと余白の最適化:</strong><br>
-                  80%縮小表示時のウィンドウ余白を解消し、高倍率表示時でもノート一覧のフッターやアクションボタンが押しやすいよう配置を最適化しました。
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- EN -->
-          <div class="lang-en">
-            <div class="release-section">
-              <h2 class="release-section-title">✨ New Features &amp; Improvements</h2>
-              <ul class="release-list">
-                <li>
-                  <strong>UI Display Scaling Support (Windows):</strong><br>
-                  Added UI scaling for PC displays. Adjust the overall interface size (80%, 100%, 120%, 140%, 160%) to suit your screen, improving readability and accessibility across menus, toolbars, and note lists.
-                </li>
-                <li>
-                  <strong>Combined Editor Text Sizing:</strong><br>
-                  Seamlessly combines with editor text sizing (A-- to A++) for a more comfortable writing experience on high-resolution monitors.
-                </li>
-                <li>
-                  <strong>Layout &amp; Margin Optimization:</strong><br>
-                  Eliminated edge margin gaps when zoomed out to 80% and refined button visibility and spacing at higher scale factors.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Version 1.1.1 -->
-        <article class="release-card">
-          <div class="release-header">
-            <div class="release-title-row">
-              <span class="release-version">Qujott 1.1.1</span>
-            </div>
-            <span class="release-date">
-              <span class="lang-ja">2026年10月</span>
-              <span class="lang-en">October 2026</span>
-            </span>
-          </div>
-
-          <!-- JA -->
-          <div class="lang-ja">
-            <div class="release-section">
-              <h2 class="release-section-title">✨ 改善 & 不具合修正</h2>
-              <ul class="release-list">
-                <li>
-                  <strong>Windows Explorerからのファイル起動連携（Editor Mode）の修正:</strong><br>
-                  エクスプローラーから <code>.md</code> や <code>.markdown</code>、<code>.txt</code> ファイルをダブルクリックして開いた際、外部ファイルを直接読み込んで素早く閲覧・編集できる起動連携を修正・安定化しました。
-                </li>
-                <li>
-                  <strong>Editor Modeのウィンドウ位置記憶の向上:</strong><br>
-                  外部ファイル編集専用のウィンドウサイズ・位置を独立して正確に記憶・復元するように改善しました。
-                </li>
-                <li>
-                  <strong>全体的なパフォーマンスとUIのブラッシュアップ:</strong><br>
-                  細かな表示の安定性向上および軽快な書き味の維持を行いました。
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- EN -->
-          <div class="lang-en">
-            <div class="release-section">
-              <h2 class="release-section-title">✨ Improvements &amp; Fixes</h2>
-              <ul class="release-list">
-                <li>
-                  <strong>File Association Launch for Editor Mode:</strong><br>
-                  Fixed and stabilized launching external Markdown files (<code>.md</code>, <code>.markdown</code>, <code>.txt</code>) directly from Windows Explorer, allowing instant viewing and editing in Editor Mode.
-                </li>
-                <li>
-                  <strong>Dedicated Window Geometry for Editor Mode:</strong><br>
-                  Improved window positioning and size memory specifically for external file editing sessions.
-                </li>
-                <li>
-                  <strong>General Performance &amp; UI Polish:</strong><br>
-                  Overall stability enhancements and refined typing responsiveness.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Version 1.1.0 -->
-        <article class="release-card">
-          <div class="release-header">
-            <div class="release-title-row">
-              <span class="release-version">Qujott 1.1.0</span>
-            </div>
-            <span class="release-date">
-              <span class="lang-ja">2026年10月</span>
-              <span class="lang-en">October 2026</span>
-            </span>
-          </div>
-
-          <!-- JA -->
-          <div class="lang-ja">
-            <div class="release-section">
-              <h2 class="release-section-title">✨ 新機能 & 機能改善</h2>
-              <ul class="release-list">
-                <li>
-                  <strong>Qujott Pro 7日間無料トライアル（Pro Trial）:</strong><br>
-                  用紙テーマ（Paper Themes）や情景（Atmosphere Scenes）を、購入前に7日間無料でお試しいただけるようになりました。設定画面でロックされたテーマ・情景を選択するだけで、確認ダイアログや会員登録なしで即座に開始されます。
-                </li>
-                <li>
-                  <strong>アプリ内リリースノート（What's New）:</strong><br>
-                  設定の「About」画面に「更新内容」ボタンを追加しました。アップデート内容をアプリ内で手軽に確認できます。
-                </li>
-                <li>
-                  <strong>起動時ウィンドウ復元精度の向上:</strong><br>
-                  1ペイン表示、コンパクトモード、最大化状態、マルチモニター上の自由な配置が、次回起動時に狂わず滑らかに復元されるよう改善しました。起動時のウィンドウジャンプやチラつきも解消されています。
-                </li>
-                <li>
-                  <strong>起動パフォーマンスの最適化:</strong><br>
-                  ローカルファーストの設計思想を徹底し、新機能追加後も起動クリティカルパスへの影響を最小限に抑え、ミリ秒単位の高速起動を維持しています。
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- EN -->
-          <div class="lang-en">
-            <div class="release-section">
-              <h2 class="release-section-title">✨ Highlights & Improvements</h2>
-              <ul class="release-list">
-                <li>
-                  <strong>7-Day Pro Free Trial:</strong><br>
-                  Try all premium Paper Themes and Atmosphere Scenes free for 7 days before purchasing. Simply select any locked theme or scene in Settings to begin your trial instantly with zero friction—no account or payment required.
-                </li>
-                <li>
-                  <strong>In-App Release Notes ("What's New"):</strong><br>
-                  Easily view update highlights directly within Settings &gt; About.
-                </li>
-                <li>
-                  <strong>Reliable Window Geometry &amp; Maximized Restoration:</strong><br>
-                  Window size, coordinates, single-pane layouts, compact view, and maximized states are now faithfully restored upon startup without visual jumping or flicker.
-                </li>
-                <li>
-                  <strong>Startup Performance &amp; Polish:</strong><br>
-                  Optimized the startup critical path to maintain instant local-first launch speeds while introducing trial and update features.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Version 1.0.0 -->
-        <article class="release-card">
-          <div class="release-header">
-            <div class="release-title-row">
-              <span class="release-version">Qujott 1.0.0</span>
-            </div>
-            <span class="release-date">
-              <span class="lang-ja">2026年9月</span>
-              <span class="lang-en">September 2026</span>
-            </span>
-          </div>
-
-          <!-- JA -->
-          <div class="lang-ja">
-            <div class="release-section">
-              <h2 class="release-section-title">🎉 正式リリース</h2>
-              <ul class="release-list">
-                <li>
-                  <strong>思いついたらすぐ書けるミニマルエディタ:</strong><br>
-                  ローカルファーストで動作し、思考を邪魔しない静かなMarkdownメモ空間。
-                </li>
-                <li>
-                  <strong>しまう（Put Away）と見直す（Revisit）:</strong><br>
-                  メモを削除せず一時的に視界から隠す「しまう」機能と、指定したタイミングで自然に再会できる「見直す」機能を搭載。
-                </li>
-                <li>
-                  <strong>自由なローカル保存先:</strong><br>
-                  PC内の任意のフォルダに、標準的なプレーンMarkdown形式（.md）で保存。ロックインは一切ありません。
-                </li>
-                <li>
-                  <strong>Qujott Pro:</strong><br>
-                  空間を仕立てる用紙テーマ（Paper, Maple, Forest）や環境情景（Sakura, Ocean, Sunset等）を開放する買い切りオプション。
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- EN -->
-          <div class="lang-en">
-            <div class="release-section">
-              <h2 class="release-section-title">🎉 Initial Release</h2>
-              <ul class="release-list">
-                <li>
-                  <strong>Minimalist thought capture:</strong><br>
-                  A quiet, fast, distraction-free Markdown notepad resting right beside your thoughts.
-                </li>
-                <li>
-                  <strong>Put Away &amp; Revisit:</strong><br>
-                  Gently tuck notes away to clear your mind, and let them resurface quietly when the timing is right.
-                </li>
-                <li>
-                  <strong>100% Local-first Storage:</strong><br>
-                  Store your notes in any designated folder on your PC as plain Markdown (.md) files. Zero vendor lock-in.
-                </li>
-                <li>
-                  <strong>Qujott Pro:</strong><br>
-                  One-time purchase option to unlock custom Paper Themes and atmospheric scenes.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Action Button -->
-      <div style="margin-top: 48px; width: 100%; text-align: center;">
-        <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-          <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
-          </svg>
-          <span class="lang-ja">Microsoft Store で Qujott を入手</span>
-          <span class="lang-en">Get Qujott on Microsoft Store</span>
-        </a>
-      </div>
-    </div>
-  </main>
-
-  <!-- Minimal Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="language-switch">
-        <span class="lang-label">Language</span>
-        <button type="button" class="lang-btn active" data-lang="ja" onclick="setLanguage('ja')">日本語</button>
-        <span class="lang-divider">/</span>
-        <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')">English</button>
-      </div>
-
-      <div class="footer-brand">Qujott — Quiet Jotter.</div>
-      <div class="footer-links">
-        <a href="index.html" class="footer-item">Official Website</a>
-        <span class="divider">•</span>
-        <span class="footer-item active">Release Notes</span>
-        <span class="divider">•</span>
-        <a href="privacy.html" class="footer-item">Privacy Policy</a>
-        <span class="divider">•</span>
-        <a href="terms.html" class="footer-item">Terms of Use</a>
-        <span class="divider">•</span>
-        <a href="mailto:support@qujott.com" class="footer-item">Contact Us</a>
-        <span class="divider">•</span>
-        <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="footer-item">Microsoft Store</a>
-      </div>
-      <div class="copyright">
-        &copy; 2026 Qujott. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
-  <!-- Language Switch Script -->
-  <script>
-    function setLanguage(lang) {
-      document.documentElement.lang = lang;
-      try {
-        localStorage.setItem('qujott-lang', lang);
-      } catch (e) {}
-      document.querySelectorAll('.lang-btn').forEach(function(btn) {
-        if (btn.getAttribute('data-lang') === lang) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
-    }
-
-    (function initLanguage() {
+    (function() {
+      var supported = ['ja', 'en', 'es', 'pt-br', 'de', 'fr', 'ko', 'zh-tw'];
       var saved = null;
       try {
         saved = localStorage.getItem('qujott-lang');
       } catch (e) {}
-      if (!saved) {
-        saved = (navigator.language && navigator.language.indexOf('ja') === 0) ? 'ja' : 'en';
+
+      var targetLang = null;
+      if (saved && supported.indexOf(saved) !== -1) {
+        targetLang = saved;
+      } else {
+        var userLangs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+        for (var i = 0; i < userLangs.length; i++) {
+          var code = (userLangs[i] || '').toLowerCase();
+          if (code.startsWith('ja')) { targetLang = 'ja'; break; }
+          if (code.startsWith('zh-tw') || code.startsWith('zh-hk') || code.startsWith('zh-mo') || code.startsWith('zh-hant')) { targetLang = 'zh-tw'; break; }
+          if (code.startsWith('ko')) { targetLang = 'ko'; break; }
+          if (code.startsWith('es')) { targetLang = 'es'; break; }
+          if (code.startsWith('pt')) { targetLang = 'pt-br'; break; }
+          if (code.startsWith('de')) { targetLang = 'de'; break; }
+          if (code.startsWith('fr')) { targetLang = 'fr'; break; }
+          if (code.startsWith('en')) { targetLang = 'en'; break; }
+        }
       }
-      setLanguage(saved);
+      if (!targetLang) {
+        targetLang = 'en';
+      }
+      window.location.replace(targetLang + '/releases.html');
     })();
   </script>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 48px 24px; text-align: center; color: #1d1d1f; background: #fafafa;">
+  <noscript>
+    <h1 style="font-size: 24px; margin-bottom: 12px; font-weight: 600;">Release Notes — Qujott</h1>
+    <p style="font-size: 16px; margin-bottom: 24px; color: #555;">Redirecting to Release Notes in English...</p>
+    <p><a href="en/releases.html" style="display: inline-block; padding: 10px 20px; background: #1d1d1f; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 500;">Continue to Release Notes</a></p>
+    <p style="margin-top: 36px; font-size: 13px; color: #888; line-height: 2;">
+      Languages:
+      <a href="ja/releases.html" style="color: #444; margin: 0 4px;">日本語</a> •
+      <a href="en/releases.html" style="color: #444; margin: 0 4px;">English</a> •
+      <a href="es/releases.html" style="color: #444; margin: 0 4px;">Español</a> •
+      <a href="pt-br/releases.html" style="color: #444; margin: 0 4px;">Português (Brasil)</a> •
+      <a href="de/releases.html" style="color: #444; margin: 0 4px;">Deutsch</a> •
+      <a href="fr/releases.html" style="color: #444; margin: 0 4px;">Français</a> •
+      <a href="ko/releases.html" style="color: #444; margin: 0 4px;">한국어</a> •
+      <a href="zh-tw/releases.html" style="color: #444; margin: 0 4px;">繁體中文</a>
+    </p>
+  </noscript>
 </body>
 </html>

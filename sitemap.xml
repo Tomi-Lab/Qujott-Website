@@ -1,23 +1,243 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://qujott.com/</loc>
-    <priority>1.0</priority>
+    <loc>https://qujott.com/ja/</loc>
     <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/en/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/es/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/pt-br/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/de/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/fr/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/ko/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/zh-tw/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/ja/releases.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/en/releases.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/es/releases.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/pt-br/releases.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/de/releases.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/fr/releases.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/ko/releases.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/zh-tw/releases.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://qujott.com/ja/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://qujott.com/en/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://qujott.com/es/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://qujott.com/de/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://qujott.com/fr/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://qujott.com/ko/releases.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/releases.html"/>
+  </url>
+  <url>
+    <loc>https://qujott.com/experience.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://qujott.com/privacy.html</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://qujott.com/terms.html</loc>
-    <priority>0.5</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://qujott.com/releases.html</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
