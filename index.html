@@ -15,12 +15,16 @@
   <link rel="alternate" hreflang="fr" href="https://qujott.com/fr/">
   <link rel="alternate" hreflang="ko" href="https://qujott.com/ko/">
   <link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/">
+  <link rel="alternate" hreflang="zh-CN" href="https://qujott.com/zh-cn/">
+  <link rel="alternate" hreflang="ru" href="https://qujott.com/ru/">
+  <link rel="alternate" hreflang="it" href="https://qujott.com/it/">
+  <link rel="alternate" hreflang="id" href="https://qujott.com/id/">
   <noscript>
     <meta http-equiv="refresh" content="0; url=en/">
   </noscript>
   <script>
     (function() {
-      var supported = ['ja', 'en', 'es', 'pt-br', 'de', 'fr', 'ko', 'zh-tw'];
+      var supported = ['ja', 'en', 'es', 'pt-br', 'de', 'fr', 'ko', 'zh-tw', 'zh-cn', 'ru', 'it', 'id'];
       var saved = null;
       try {
         saved = localStorage.getItem('qujott-lang');
@@ -35,6 +39,10 @@
           var code = (userLangs[i] || '').toLowerCase();
           if (code.startsWith('ja')) { targetLang = 'ja'; break; }
           if (code.startsWith('zh-tw') || code.startsWith('zh-hk') || code.startsWith('zh-mo') || code.startsWith('zh-hant')) { targetLang = 'zh-tw'; break; }
+          if (code.startsWith('zh-cn') || code.startsWith('zh-sg') || code.startsWith('zh-hans') || code === 'zh') { targetLang = 'zh-cn'; break; }
+          if (code.startsWith('ru')) { targetLang = 'ru'; break; }
+          if (code.startsWith('it')) { targetLang = 'it'; break; }
+          if (code.startsWith('id') || code.startsWith('in')) { targetLang = 'id'; break; }
           if (code.startsWith('ko')) { targetLang = 'ko'; break; }
           if (code.startsWith('es')) { targetLang = 'es'; break; }
           if (code.startsWith('pt')) { targetLang = 'pt-br'; break; }
@@ -64,7 +72,11 @@
       <a href="de/" style="color: #444; margin: 0 4px;">Deutsch</a> •
       <a href="fr/" style="color: #444; margin: 0 4px;">Français</a> •
       <a href="ko/" style="color: #444; margin: 0 4px;">한국어</a> •
-      <a href="zh-tw/" style="color: #444; margin: 0 4px;">繁體中文</a>
+      <a href="zh-tw/" style="color: #444; margin: 0 4px;">繁體中文</a> •
+      <a href="zh-cn/" style="color: #444; margin: 0 4px;">简体中文</a> •
+      <a href="ru/" style="color: #444; margin: 0 4px;">Русский</a> •
+      <a href="it/" style="color: #444; margin: 0 4px;">Italiano</a> •
+      <a href="id/" style="color: #444; margin: 0 4px;">Bahasa Indonesia</a>
     </p>
   </noscript>
 </body>

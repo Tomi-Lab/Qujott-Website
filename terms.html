@@ -55,6 +55,10 @@
             <option value="fr">Français</option>
             <option value="ko">한국어</option>
             <option value="zh-tw">繁體中文</option>
+            <option value="zh-cn">简体中文</option>
+            <option value="ru">Русский</option>
+            <option value="it">Italiano</option>
+            <option value="id">Bahasa Indonesia</option>
         </select>
         <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="6 9 12 15 18 9"></polyline>
@@ -101,6 +105,10 @@
             <option value="fr">Français</option>
             <option value="ko">한국어</option>
             <option value="zh-tw">繁體中文</option>
+            <option value="zh-cn">简体中文</option>
+            <option value="ru">Русский</option>
+            <option value="it">Italiano</option>
+            <option value="id">Bahasa Indonesia</option>
         </select>
         <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <polyline points="6 9 12 15 18 9"></polyline>
@@ -128,6 +136,15 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function changeLanguage(lang) {
+      try {
+        localStorage.setItem('qujott-lang', lang);
+      } catch (e) {}
+      window.location.href = lang + '/';
+    }
+  </script>
 
   <script>
     function changeLanguage(lang) {

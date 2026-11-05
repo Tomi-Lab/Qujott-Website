@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qujott — Записывайте мысли в момент их появления и просматривайте в любое время</title>
+  <meta name="description" content="Qujott — это легкий блокнот, сочетающий простоту бумажной записной книжки со свободой стандартного Markdown. Хранение файлов в выбранной вами папке без привязки к форматам.">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Canonical & Multilingual Hreflang -->
+  <link rel="canonical" href="https://qujott.com/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://qujott.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://qujott.com/ja/">
+  <link rel="alternate" hreflang="en" href="https://qujott.com/en/">
+  <link rel="alternate" hreflang="es" href="https://qujott.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/">
+  <link rel="alternate" hreflang="de" href="https://qujott.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://qujott.com/fr/">
+  <link rel="alternate" hreflang="ko" href="https://qujott.com/ko/">
+  <link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/">
+  <link rel="alternate" hreflang="zh-CN" href="https://qujott.com/zh-cn/">
+  <link rel="alternate" hreflang="ru" href="https://qujott.com/ru/">
+  <link rel="alternate" hreflang="it" href="https://qujott.com/it/">
+  <link rel="alternate" hreflang="id" href="https://qujott.com/id/">
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="Ba4p3ZzvcM0wk_723Eq8o8l4pbdrR7qrbykzYvb2q4Y">
+  
+  <!-- Favicon & Touch Icon -->
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../images/app-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Qujott — Записывайте мысли в момент их появления и просматривайте в любое время">
+  <meta property="og:description" content="Легкий блокнот, сочетающий простоту заметок со свободой стандартного Markdown. Сначала запишите мысли, а порядок наведете позже.">
+  <meta property="og:image" content="../images/hero-two-pane-ru.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qujott.com/ru/">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7P35Y3G9J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R7P35Y3G9J');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yj6hat2i6m");
+  </script>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- Top Tagline Bar -->
+  <header class="top-tagline-bar">
+    <div class="container top-bar-inner">
+      <a href="./" class="top-brand-link">
+        <img src="../images/app-icon.png" alt="Qujott Icon" class="top-brand-icon">
+        <span class="tagline-primary">Quiet Jotter.</span>
+      </a>
+      <div class="language-select-wrapper">
+        <svg class="lang-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <label for="lang-select-header" class="visually-hidden">Language</label>
+        <select id="lang-select-header" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="zh-tw">繁體中文</option>
+            <option value="zh-cn">简体中文</option>
+            <option value="ru" selected>Русский</option>
+            <option value="it">Italiano</option>
+            <option value="id">Bahasa Indonesia</option>
+        </select>
+        <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <div class="brand">
+          <img src="../images/app-icon.png" alt="Qujott App Icon" class="hero-icon-large">
+          <h1 class="app-title">Qujott</h1>
+          <p class="hero-heading">Записывайте мысли легко, <br class="desktop-break">возвращайтесь к ним в удобный момент.</p>
+        </div>
+
+        <p class="hero-description">
+          Qujott объединяет легкость и наглядность бумажного блокнота со свободой текстового редактора в простом цифровом формате.<br>Порядок наведете позже. Главное — держите мысли под рукой.<br>
+          <span class="hero-subtext">Поддержка стандартного формата Markdown. Сохраняйте и редактируйте заметки как обычные текстовые файлы там, где удобно вам.</span>
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
+            </svg>
+            <span>Скачать для Windows</span>
+          </a>
+          <a href="../experience.html" class="btn btn-secondary btn-experience">
+            <span>Попробовать в Web</span>
+            <span class="badge badge-experience">Experience</span>
+          </a>
+          <div class="btn btn-disabled">
+            Mac <span class="badge"><span>В разработке</span></span>
+          </div>
+          <div class="btn btn-disabled">
+            iPhone / iPad <span class="badge"><span>В разработке</span></span>
+          </div>
+          <div class="btn btn-disabled">
+            Android <span class="badge"><span>Рассматривается</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/hero-two-pane-ru.png" alt="Спокойное двухпанельное пространство, где ваши мысли и список заметок гармонично находятся перед глазами" class="screenshot-img">
+        </div>
+        <p class="media-caption">Спокойное двухпанельное пространство, где ваши мысли и список заметок гармонично находятся перед глазами</p>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section philosophy-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Философия (Philosophy)</span>
+          <h2 class="section-title">Как бумажный блокнот на краю рабочего стола.</h2>
+        </div>
+        <p class="section-body">
+          Qujott не предназначен для перегруженного управления задачами или создания громоздких баз знаний.<br>Как и бумажная записная книжка рядом с клавиатурой, приложение создано лишь для одной цели: начать писать в ту же секунду, когда родилась мысль.<br><br>
+          Вам не нужно заранее думать о папках или обязательно присваивать теги.<br>Просто зафиксируйте пришедшие слова и сохраните их рядом. Структурировать записи можно позже в спокойном темпе.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. Put Away & Revisit Section -->
+    <section class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Put Away & Revisit</span>
+          <h2 class="section-title">Убирайте записи с глаз и возвращайтесь к ним вовремя.</h2>
+        </div>
+        <p class="section-body">Закончив заметку, не обязательно ее удалять — спрячьте ее с помощью «Отложить» (Put Away), сохранив рабочее пространство чистым.<br>С функцией «Вернуться» (Revisit) заметка мягко появится вверху списка сегодня, завтра или на следующей неделе. Без назойливых уведомлений и спешки.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/put-away-revisit-ru.png" alt="Освобождайте рабочий экран, не удаляя важные записи. Заметка спокойно появится вверху списка в выбранный момент: сегодня, завтра или на следующей неделе." class="screenshot-img">
+        </div>
+        <p class="media-caption">Освобождайте рабочий экран, не удаляя важные записи. Заметка спокойно появится вверху списка в выбранный момент: сегодня, завтра или на следующей неделе.</p>
+      </div>
+    </section>
+
+    <!-- 2. Focus Mode Section -->
+    <section class="section focus-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Focus Mode</span>
+          <h2 class="section-title">Сосредоточьтесь на словах без лишнего шума.</h2>
+        </div>
+        <p class="section-body">Скройте боковую панель и переключитесь в однопанельный «Режим фокуса» (Focus Mode).<br>Интерфейс убирает все второстепенные элементы, оставляя вас наедине с мыслями и чистым текстом.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/focus-mode-ru.png" alt="Однопанельный минималистичный интерфейс уменьшает визуальные отвлечения и помогает полностью сосредоточиться на тексте и размышлениях." class="screenshot-img">
+        </div>
+        <p class="media-caption">Однопанельный минималистичный интерфейс уменьшает визуальные отвлечения и помогает полностью сосредоточиться на тексте и размышлениях.</p>
+      </div>
+    </section>
+
+    <!-- 3. Plain Markdown (No Lock-In) Section -->
+    <section class="section notes-files-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Plain Markdown</span>
+          <h2 class="section-title">Ваши слова остаются в вашем распоряжении.</h2>
+        </div>
+        <p class="section-body">Все заметки сохраняются в открытом стандартном формате Markdown (.md).<br>Никакой привязки к закрытым системам. Вы можете в любой момент открыть, отредактировать, экспортировать или скопировать файлы в Проводнике Windows или совместимом текстовом редакторе.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/no-lock-in-ru.png" alt="Все заметки сохраняются в стандартном формате Markdown (.md). Вы всегда можете свободно открыть, изменить, экспортировать и создать резервную копию в любом совместимом редакторе." class="screenshot-img">
+        </div>
+        <p class="media-caption">Все заметки сохраняются в стандартном формате Markdown (.md). Вы всегда можете свободно открыть, изменить, экспортировать и создать резервную копию в любом совместимом редакторе.</p>
+      </div>
+    </section>
+
+    <!-- 4. Editor Mode Section -->
+    <section class="section editor-mode-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Editor Mode</span>
+          <h2 class="section-title">Открывайте и редактируйте локальные файлы Markdown напрямую.</h2>
+        </div>
+        <p class="section-body">Открывайте существующие файлы Markdown на вашем компьютере прямо в Qujott, вносите правки и сохраняйте изменения клавишами Ctrl+S в исходный файл.<br>Без процедур импорта и конвертации форматов. Удобный и легкий редактор для повседневных задач.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/editor-mode-direct-ru.png" alt="Открывайте и редактируйте файлы Markdown прямо в Qujott с сохранением изменений в исходный файл по Ctrl+S. Без импорта и смены формата." class="screenshot-img">
+        </div>
+        <p class="media-caption">Открывайте и редактируйте файлы Markdown прямо в Qujott с сохранением изменений в исходный файл по Ctrl+S. Без импорта и смены формата.</p>
+      </div>
+    </section>
+
+    <!-- 5. Storage Choice Section -->
+    <section class="section shared-folder-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Storage Choice</span>
+          <h2 class="section-title">Место хранения выбираете только вы.</h2>
+        </div>
+        <p class="section-body">Укажите любую папку на компьютере для хранения заметок: локальную директорию, папку облачной синхронизации или внешний накопитель.<br>Без создания учетных записей — файлы сохраняются именно там, где решили вы.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/storage-choice-ru.png" alt="Свободно выбирайте место хранения: локальная папка на ПК, синхронизируемая папка или внешний накопитель. Файлы сохраняются в выбранной папке без необходимости создавать учетную запись." class="screenshot-img">
+        </div>
+        <p class="media-caption">Свободно выбирайте место хранения: локальная папка на ПК, синхронизируемая папка или внешний накопитель. Файлы сохраняются в выбранной папке без необходимости создавать учетную запись.</p>
+      </div>
+    </section>
+
+    <!-- 6. Personalization & Comfort Section -->
+    <section class="section custom-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Персонализация (Personalization)</span>
+          <h2 class="section-title">Оформите пространство для записей по своему вкусу.</h2>
+        </div>
+        <p class="section-body">Атмосферные сцены «Atmosphere Scenes» (например, цветущая сакура Sakura), эффект матового стекла и бумажные текстуры создают приятное настроение для ежедневных заметок (дополнение Qujott Pro).<br>Также доступно масштабирование интерфейса (от 80% до 160%), чтобы настроить удобный для вас масштаб отображения под ваш экран.</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/qujott-custom-ru.png" alt="Дополнение Qujott Pro позволяет настроить рабочее пространство: темы бумаги, атмосферные сцены (например, Sakura) и эффект матового стекла создают спокойную обстановку для творчества." class="screenshot-img">
+        </div>
+        <p class="media-caption">Дополнение Qujott Pro позволяет настроить рабочее пространство: темы бумаги, атмосферные сцены (например, Sakura) и эффект матового стекла создают спокойную обстановку для творчества.</p>
+      </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="section platforms-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Платформы</span>
+          <h2 class="section-title">Мысли всегда под рукой.</h2>
+        </div>
+
+        <div class="platform-list">
+          <div class="platform-item">
+            <span class="platform-name">Windows</span>
+            <span class="platform-status status-now">Доступно сейчас (v1.2.0)</span>
+          </div>
+          <div class="platform-item">
+            <span class="platform-name">Mac</span>
+            <span class="platform-status status-soon">В разработке</span>
+          </div>
+          <div class="platform-item">
+            <span class="platform-name">iPhone / iPad</span>
+            <span class="platform-status status-soon">В разработке</span>
+          </div>
+          <div class="platform-item">
+            <span class="platform-name">Android</span>
+            <span class="platform-status status-considering">Рассматривается</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="language-select-wrapper">
+        <svg class="lang-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <label for="lang-select-footer" class="visually-hidden">Language</label>
+        <select id="lang-select-footer" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="zh-tw">繁體中文</option>
+            <option value="zh-cn">简体中文</option>
+            <option value="ru" selected>Русский</option>
+            <option value="it">Italiano</option>
+            <option value="id">Bahasa Indonesia</option>
+        </select>
+        <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
+      <div class="footer-brand">Qujott — Quiet Jotter.</div>
+      <div class="footer-links">
+        <span class="footer-item active">Официальный сайт</span>
+        <span class="divider">•</span>
+        <a href="../experience.html" class="footer-item">Веб-версия</a>
+        <span class="divider">•</span>
+        <a href="releases.html" class="footer-item">История версий</a>
+        <span class="divider">•</span>
+        <a href="../privacy.html" class="footer-item">Политика конфиденциальности</a>
+        <span class="divider">•</span>
+        <a href="../terms.html" class="footer-item">Условия использования</a>
+        <span class="divider">•</span>
+        <a href="mailto:support@qujott.com" class="footer-item">Контакты</a>
+        <span class="divider">•</span>
+        <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="footer-item">Microsoft Store</a>
+      </div>
+      <div class="copyright">
+        © 2026 Qujott. Все права защищены.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Language Switch Script -->
+  <script>
+    function changeLanguage(lang) {
+      try {
+        localStorage.setItem('qujott-lang', lang);
+      } catch (e) {}
+      window.location.href = '../' + lang + '/';
+    }
+    try {
+      localStorage.setItem('qujott-lang', 'ru');
+    } catch (e) {}
+  </script>
+</body>
+</html>

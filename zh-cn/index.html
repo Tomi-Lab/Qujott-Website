@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qujott — 灵感一闪，随手记下。轻巧笔记体验，尽享 Markdown 的自由</title>
+  <meta name="description" content="Qujott 结合了便签本的直观好读与文本编辑器的自由通用，是一款轻巧安静的随手笔记本。支持标准 Markdown 格式。">
+  <meta name="theme-color" content="#ffffff">
+  
+  <!-- Canonical & Multilingual Hreflang -->
+  <link rel="canonical" href="https://qujott.com/zh-cn/">
+  <link rel="alternate" hreflang="x-default" href="https://qujott.com/en/">
+  <link rel="alternate" hreflang="ja" href="https://qujott.com/ja/">
+  <link rel="alternate" hreflang="en" href="https://qujott.com/en/">
+  <link rel="alternate" hreflang="es" href="https://qujott.com/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://qujott.com/pt-br/">
+  <link rel="alternate" hreflang="de" href="https://qujott.com/de/">
+  <link rel="alternate" hreflang="fr" href="https://qujott.com/fr/">
+  <link rel="alternate" hreflang="ko" href="https://qujott.com/ko/">
+  <link rel="alternate" hreflang="zh-TW" href="https://qujott.com/zh-tw/">
+  <link rel="alternate" hreflang="zh-CN" href="https://qujott.com/zh-cn/">
+  <link rel="alternate" hreflang="ru" href="https://qujott.com/ru/">
+  <link rel="alternate" hreflang="it" href="https://qujott.com/it/">
+  <link rel="alternate" hreflang="id" href="https://qujott.com/id/">
+
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="Ba4p3ZzvcM0wk_723Eq8o8l4pbdrR7qrbykzYvb2q4Y">
+  
+  <!-- Favicon & Touch Icon -->
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../images/app-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Qujott — 灵感一闪，随手记下。轻巧笔记体验，尽享 Markdown 的自由">
+  <meta property="og:description" content="兼具便签的轻巧直观与 Markdown 的自由通用。整理留给以后，先让思考常伴身旁。">
+  <meta property="og:image" content="../images/hero-two-pane-zh-cn.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qujott.com/zh-cn/">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7P35Y3G9J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R7P35Y3G9J');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yj6hat2i6m");
+  </script>
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- Top Tagline Bar -->
+  <header class="top-tagline-bar">
+    <div class="container top-bar-inner">
+      <a href="./" class="top-brand-link">
+        <img src="../images/app-icon.png" alt="Qujott Icon" class="top-brand-icon">
+        <span class="tagline-primary">Quiet Jotter.</span>
+      </a>
+      <div class="language-select-wrapper">
+        <svg class="lang-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <label for="lang-select-header" class="visually-hidden">Language</label>
+        <select id="lang-select-header" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="zh-tw">繁體中文</option>
+            <option value="zh-cn" selected>简体中文</option>
+            <option value="ru">Русский</option>
+            <option value="it">Italiano</option>
+            <option value="id">Bahasa Indonesia</option>
+        </select>
+        <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <div class="brand">
+          <img src="../images/app-icon.png" alt="Qujott App Icon" class="hero-icon-large">
+          <h1 class="app-title">Qujott</h1>
+          <p class="hero-heading">灵感涌现的瞬间，轻松记下，<br class="desktop-break">随时自在重温。</p>
+        </div>
+
+        <p class="hero-description">
+          Qujott 结合了纸质便签本的随手好读与文本编辑器的自由灵活，是一款安静纯粹的轻量笔记本。<br>整理留给以后。先让思绪，常伴身旁。<br>
+          <span class="hero-subtext">支持标准通用 Markdown 格式。自由保存为纯文本文件，随心打开与编辑。</span>
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
+            </svg>
+            <span>获取 Windows 版</span>
+          </a>
+          <a href="../experience.html" class="btn btn-secondary btn-experience">
+            <span>网页版体验</span>
+            <span class="badge badge-experience">Experience</span>
+          </a>
+          <div class="btn btn-disabled">
+            Mac <span class="badge"><span>开发中</span></span>
+          </div>
+          <div class="btn btn-disabled">
+            iPhone / iPad <span class="badge"><span>开发中</span></span>
+          </div>
+          <div class="btn btn-disabled">
+            Android <span class="badge"><span>评估中</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Showcase -->
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/hero-two-pane-zh-cn.png" alt="思绪与笔记清单自然并列，沉静简约的双栏空间" class="screenshot-img">
+        </div>
+        <p class="media-caption">思绪与笔记清单自然并列，沉静简约的双栏空间</p>
+      </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="section philosophy-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">理念 (Philosophy)</span>
+          <h2 class="section-title">就像键盘旁的纸质便签本，随手即写。</h2>
+        </div>
+        <p class="section-body">
+          Qujott 并非为了打造繁杂的任务清单或庞大的知识库而生。<br>它就像静置在键盘旁的纸质便签本，只专注于一件事：当灵感闪现的瞬间，动笔不再有任何犹豫与负担。<br><br>
+          动笔前无需纠结文件夹分类，也不会强求你预先设置标签。<br>直接捕捉掠过脑海的字句并妥善安放身旁，往后重温浏览时再来轻松整理。
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. Put Away & Revisit Section -->
+    <section class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">暂时收纳 (Put Away) 与 稍后再看 (Revisit)</span>
+          <h2 class="section-title">温柔移出视线，在最合适的时机自然相遇。</h2>
+        </div>
+        <p class="section-body">写完的笔记无需急着删除，使用“暂时收纳 (Put Away)”即可将其移出视线，保持手头工作空间清爽利落。<br>设定“稍后再看 (Revisit)”，笔记便会在今天、明天或下周等合适时机自然重回列表顶端。没有刺耳的闹铃催促，在最自然的节奏中与思绪重逢。</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/put-away-revisit-zh-cn.png" alt="无需删除笔记，即可将其移出视线，保持手头工作空间清爽利落。在今天、明天或下周等合适时机，让笔记自然重回列表顶端。" class="screenshot-img">
+        </div>
+        <p class="media-caption">无需删除笔记，即可将其移出视线，保持手头工作空间清爽利落。在今天、明天或下周等合适时机，让笔记自然重回列表顶端。</p>
+      </div>
+    </section>
+
+    <!-- 2. Focus Mode Section -->
+    <section class="section focus-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Focus Mode</span>
+          <h2 class="section-title">彻底排除干扰，专注字里行间。</h2>
+        </div>
+        <p class="section-body">可隐藏侧边栏切换为单栏的“Focus 专注模式”。<br>去除所有多余的视觉元素，为您营建一处能完全静心梳理思绪、畅快书写的纯粹空间。</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/focus-mode-zh-cn.png" alt="单栏极简布局与沉静克制的界面设计，减少视觉干扰，让您更专注于文字与思考。" class="screenshot-img">
+        </div>
+        <p class="media-caption">单栏极简布局与沉静克制的界面设计，减少视觉干扰，让您更专注于文字与思考。</p>
+      </div>
+    </section>
+
+    <!-- 3. Plain Markdown (No Lock-In) Section -->
+    <section class="section notes-files-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Plain Markdown</span>
+          <h2 class="section-title">让文字回归纯粹，由您自主管理。</h2>
+        </div>
+        <p class="section-body">在 Qujott 中记录的每一篇笔记均以通用标准的 Markdown（.md）文件保存。<br>不受专有格式限制（No lock-in）。随时可在文件资源管理器或兼容的文本编辑器中自由打开、编辑、导出与备份。</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/no-lock-in-zh-cn.png" alt="所有笔记均以通用标准的 Markdown 格式保存。随时可在文件资源管理器或兼容的文本编辑器中自由打开、编辑、导出与备份。" class="screenshot-img">
+        </div>
+        <p class="media-caption">所有笔记均以通用标准的 Markdown 格式保存。随时可在文件资源管理器或兼容的文本编辑器中自由打开、编辑、导出与备份。</p>
+      </div>
+    </section>
+
+    <!-- 4. Editor Mode Section -->
+    <section class="section editor-mode-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Editor Mode</span>
+          <h2 class="section-title">直接打开现有的 Markdown 文件进行编辑。</h2>
+        </div>
+        <p class="section-body">无需导入或转换格式，即可直接使用 Qujott 打开电脑中的 Markdown 文件，原地编辑并使用 Ctrl+S 直接保存回原文件。<br>日常亦可作为轻巧流畅的单文件 Markdown 编辑器随开随用。</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/editor-mode-direct-zh-cn.png" alt="直接在 Qujott 中打开并编辑电脑中的 Markdown 文件，使用 Ctrl+S 直接保存回原文件。无需任何导入流程或专有格式转换。" class="screenshot-img">
+        </div>
+        <p class="media-caption">直接在 Qujott 中打开并编辑电脑中的 Markdown 文件，使用 Ctrl+S 直接保存回原文件。无需任何导入流程或专有格式转换。</p>
+      </div>
+    </section>
+
+    <!-- 5. Storage Choice Section -->
+    <section class="section shared-folder-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Storage Choice</span>
+          <h2 class="section-title">保存目录，由您自主选择。</h2>
+        </div>
+        <p class="section-body">将用户选择的文件夹设为 Qujott 的存储目录：无论是本地文件夹、现有的同步文件夹，还是外接驱动器。<br>无需注册或登录账号，笔记直接保存在您选择的文件夹中。</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/storage-choice-zh-cn.png" alt="存储位置可在本地文件夹、同步文件夹、外接驱动器等之间自主选择。无需注册或登录账号，笔记直接保存在您选择的文件夹中。" class="screenshot-img">
+        </div>
+        <p class="media-caption">存储位置可在本地文件夹、同步文件夹、外接驱动器等之间自主选择。无需注册或登录账号，笔记直接保存在您选择的文件夹中。</p>
+      </div>
+    </section>
+
+    <!-- 6. Personalization & Comfort Section -->
+    <section class="section custom-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">外观风格 (Personalization)</span>
+          <h2 class="section-title">将书写角落，打造成专属舒心天地。</h2>
+        </div>
+        <p class="section-body">通过磨砂玻璃景深效果与融入自然之美的氛围场景“Atmosphere Scenes（如樱花场景 Sakura）”及用纸主题，为每日书写时光营建赏心悦目的静谧美感（Qujott Pro 买断选项）。<br>更支持 80% 至 160% 的 UI 界面缩放调节，便于您依据不同的屏幕分辨率自由调整舒适的显示比例。</p>
+      </div>
+
+      <div class="container-wide media-container">
+        <div class="screenshot-frame">
+          <img src="../images/qujott-custom-zh-cn.png" alt="通过 Qujott Pro 提供的 Atmosphere Scenes 氛围场景（如樱花场景 Sakura）、用纸主题与磨砂玻璃景深效果，将每日书写角落打造成赏心悦目的专属天地。" class="screenshot-img">
+        </div>
+        <p class="media-caption">通过 Qujott Pro 提供的 Atmosphere Scenes 氛围场景（如樱花场景 Sakura）、用纸主题与磨砂玻璃景深效果，将每日书写角落打造成赏心悦目的专属天地。</p>
+      </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="section platforms-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Platforms</span>
+          <h2 class="section-title">让思绪，常伴身旁。</h2>
+        </div>
+
+        <div class="platform-list">
+          <div class="platform-item">
+            <span class="platform-name">Windows</span>
+            <span class="platform-status status-now">现已推出 (v1.2.0)</span>
+          </div>
+          <div class="platform-item">
+            <span class="platform-name">Mac</span>
+            <span class="platform-status status-soon">开发中</span>
+          </div>
+          <div class="platform-item">
+            <span class="platform-name">iPhone / iPad</span>
+            <span class="platform-status status-soon">开发中</span>
+          </div>
+          <div class="platform-item">
+            <span class="platform-name">Android</span>
+            <span class="platform-status status-considering">评估中</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="language-select-wrapper">
+        <svg class="lang-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <label for="lang-select-footer" class="visually-hidden">Language</label>
+        <select id="lang-select-footer" class="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="ja">日本語</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="ko">한국어</option>
+            <option value="zh-tw">繁體中文</option>
+            <option value="zh-cn" selected>简体中文</option>
+            <option value="ru">Русский</option>
+            <option value="it">Italiano</option>
+            <option value="id">Bahasa Indonesia</option>
+        </select>
+        <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+
+      <div class="footer-brand">Qujott — Quiet Jotter.</div>
+      <div class="footer-links">
+        <span class="footer-item active">官方网站</span>
+        <span class="divider">•</span>
+        <a href="../experience.html" class="footer-item">网页版体验</a>
+        <span class="divider">•</span>
+        <a href="releases.html" class="footer-item">更新记录</a>
+        <span class="divider">•</span>
+        <a href="../privacy.html" class="footer-item">隐私政策</a>
+        <span class="divider">•</span>
+        <a href="../terms.html" class="footer-item">使用条款</a>
+        <span class="divider">•</span>
+        <a href="mailto:support@qujott.com" class="footer-item">联系我们</a>
+        <span class="divider">•</span>
+        <a href="https://apps.microsoft.com/detail/9NVTN0CRZZZF" target="_blank" rel="noopener noreferrer" class="footer-item">Microsoft Store</a>
+      </div>
+      <div class="copyright">
+        © 2026 Qujott. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Language Switch Script -->
+  <script>
+    function changeLanguage(lang) {
+      try {
+        localStorage.setItem('qujott-lang', lang);
+      } catch (e) {}
+      window.location.href = '../' + lang + '/';
+    }
+    try {
+      localStorage.setItem('qujott-lang', 'zh-cn');
+    } catch (e) {}
+  </script>
+</body>
+</html>
